@@ -3,7 +3,7 @@ from playwright.sync_api import Page, expect
 
 
 def test_homepage_has_Playwright_in_title_and_get_started_link_linking_to_the_intro_page(page: Page):
-    page.goto("https://playwright.dev/")
+    page.goto("https://google.com")
 
     # Expect a title "to contain" a substring.
     expect(page).to_have_title(re.compile("Playwright"))
