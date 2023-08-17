@@ -28,7 +28,7 @@ jobs:
         
       - name: Install playwright browser
         run: 
-          pipenv run playwright install --with=chromium
+          pipenv run playwright install chromium
 
       - name: Run tests
         run: |
