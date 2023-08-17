@@ -28,8 +28,14 @@ jobs:
         
       - name: Install playwright browser
         run: 
-          pipenv run playwright install
+          pipenv run playwright install chromium
 
       - name: Run tests
         run: |
           pipenv run pytest
+
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v3
+        with:
+          name: teststraces
+          path: report/
